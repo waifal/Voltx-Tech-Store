@@ -1,47 +1,60 @@
-<div class="card bg-dark text-white shadow-sm" style="width: 220px;">
+<?php
+$categories = [
+    [
+        "name" => "Computers", 
+        "icon" => "bi-laptop", 
+        "link" => "#"
+    ],
+    [
+        "name" => "Components", 
+        "icon" => "bi-cpu", 
+        "link" => "#"
+    ],
+    [
+        "name" => "Peripherals", 
+        "icon" => "bi-keyboard", 
+        "link" => "#"
+    ],
+    [
+        "name" => "Networking", 
+        "icon" => "bi-wifi", 
+        "link" => "#"
+    ],
+    [
+        "name" => "Phones & Wearables", 
+        "icon" => "bi-phone", 
+        "link" => "#"
+    ],
+    [
+        "name" => "Gaming", 
+        "icon" => "bi-controller", 
+        "link" => "#"
+    ],
+    [
+        "name" => "Audio & Visual", 
+        "icon" => "bi-speaker", 
+        "link" => "#"
+    ],
+    [
+        "name" => "Smart Home", 
+        "icon" => "bi-house", 
+        "link" => "#"
+    ]
+];
+?>
+
+<!-- Category Sidebar -->
+<div class="card bg-dark text-white shadow-sm mb-3" style="max-width: 100%; width: 220px;">
     <div class="card-body">
         <h5 class="card-title mb-3">Categories</h5>
         <ul class="nav nav-pills flex-column gap-1">
-            <li class="nav-item">
-                <a class="nav-link text-white d-flex align-items-center" href="#">
-                    <i class="bi bi-laptop me-2"></i> Computers
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link text-white d-flex align-items-center" href="#">
-                    <i class="bi bi-cpu me-2"></i> Components
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link text-white d-flex align-items-center" href="#">
-                    <i class="bi bi-keyboard me-2"></i> Peripherals
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link text-white d-flex align-items-center" href="#">
-                    <i class="bi bi-wifi me-2"></i> Networking
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link text-white d-flex align-items-center" href="#">
-                    <i class="bi bi-phone me-2"></i> Phones & Wearables
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link text-white d-flex align-items-center" href="#">
-                    <i class="bi bi-controller me-2"></i> Gaming
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link text-white d-flex align-items-center" href="#">
-                    <i class="bi bi-speaker me-2"></i> Audio & Visual
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link text-white d-flex align-items-center" href="#">
-                    <i class="bi bi-house me-2"></i> Smart Home
-                </a>
-            </li>
+            <?php foreach ($categories as $category): ?>
+                <li class="nav-item">
+                    <a class="nav-link text-white d-flex align-items-center category-link" href="<?php echo $category['link']; ?>">
+                        <i class="bi <?php echo $category['icon']; ?> me-2"></i> <?php echo $category['name']; ?>
+                    </a>
+                </li>
+            <?php endforeach; ?>
         </ul>
     </div>
 </div>
