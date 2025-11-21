@@ -15,3 +15,7 @@ Voltx is a modern, responsive e-commerce website focused on technology products.
 - **Modern UI:** Clean, compact cards, hover effects, and icons for intuitive browsing.
 - **Powered by PHP:** Modular architecture for easy updates and expansion.
 - **Front-End Technologies:** HTML5, CSS3, JavaScript, and Bootstrap for a polished look and feel.
+
+## Preivew
+
+![Preview](screenshot.png)
