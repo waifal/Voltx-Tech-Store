@@ -1,0 +1,13 @@
+.category-link {
+    transition: text-decoration 0.2s;
+}
+
+.category-link:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 576px) {
+    .card {
+        width: 100% !important;
+    }
+}
