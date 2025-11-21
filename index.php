@@ -18,15 +18,22 @@
     <noscript>Please ensure JavaScript is enabled to view this webpage!</noscript>
     <div id="app">
         <?php include_once 'src/components/Navbar.inc.php' ?>
-        <section class="p-5">
-            <aside>
-                <?php include_once 'src/components/CategoriesBar.inc.php' ?>
-            </aside>
+        <section>
+            <div class="p-5 d-flex align-items-start" id="hero-section" style="gap: 1.5rem;">
+                <!-- Sidebar -->
+                <aside id="sidebar" style="flex: 0 0 220px;">
+                    <?php include_once 'src/components/CategoriesBar.inc.php' ?>
+                </aside>
+                <!-- Carousel -->
+                <div class="flex-grow-1" id="carousel-container">
+                    <?php include_once 'src/components/ImageCarousel.inc.php' ?>
+                </div>
+            </div>
         </section>
     </div>
     <!-- JavaScript -->
     <script src="src/assets/js/app.js" defer></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
