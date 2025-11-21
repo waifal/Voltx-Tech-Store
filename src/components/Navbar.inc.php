@@ -1,5 +1,4 @@
 <?php
-// Define navbar items without icons
 $navbar_items = [
     [
         "name" => "Wishlist",
@@ -19,7 +18,6 @@ $navbar_items = [
     ]
 ];
 
-// Define category items for category bar without icons
 $category_items = [
     [
         "name" => "Laptops",
@@ -90,14 +88,13 @@ $category_items = [
 
 <!-- Navbar -->
 <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
-    <div class="container-fluid">
+    <div class="container-fluid px-5">
         <!-- Left: Logo -->
         <a class="navbar-brand fs-3 fw-bold me-3" href="#">Voltx</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
             aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        
         <div class="collapse navbar-collapse" id="navbarContent">
             <!-- Search -->
             <div class="d-flex flex-grow-0 flex-lg-grow-1 ms-0 ms-lg-3 my-2 my-lg-0" style="max-width: 300px;">
@@ -107,7 +104,6 @@ $category_items = [
                     <button class="btn btn-primary" type="button"><i class="bi bi-search"></i></button>
                 </div>
             </div>
-
             <!-- Right: Nav Links -->
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0 d-flex flex-column flex-lg-row align-items-lg-center">
                 <?php foreach ($navbar_items as $item): ?>
@@ -116,7 +112,6 @@ $category_items = [
                     </li>
                 <?php endforeach; ?>
             </ul>
-
             <!-- Far Right: Cart + Total -->
             <div class="d-flex align-items-center ms-lg-4 mt-2 mt-lg-0">
                 <button class="btn btn-outline-primary position-relative me-2">
@@ -129,13 +124,11 @@ $category_items = [
         </div>
     </div>
 </nav>
-
 <!-- Category Bar -->
-<div class="category-bar-wrapper bg-dark py-2 position-relative">
+<div class="category-bar-wrapper bg-dark py-2 position-relative px-5">
     <button class="scroll-btn left d-none d-md-flex position-absolute top-50 start-0 translate-middle-y btn btn-dark">
         <i class="bi bi-chevron-left"></i>
     </button>
-
     <div class="category-bar-inner">
         <ul class="navbar-nav flex-row flex-nowrap">
             <?php foreach ($category_items as $category): ?>
@@ -145,7 +138,6 @@ $category_items = [
             <?php endforeach; ?>
         </ul>
     </div>
-
     <button class="scroll-btn right d-none d-md-flex position-absolute top-50 end-0 translate-middle-y btn btn-dark">
         <i class="bi bi-chevron-right"></i>
     </button>
